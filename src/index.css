@@ -3,83 +3,113 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Jade Green Primary Palette */
+    --primary: 152 50% 36%;
+    --primary-foreground: 40 20% 97%;
+    --primary-light: 152 28% 94%;
+    --primary-dark: 152 42% 15%;
+
+    /* Warm Cream Neutrals */
+    --background: 40 30% 97%;
+    --foreground: 40 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 40 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 40 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --secondary: 40 30% 94%;
+    --secondary-foreground: 40 10% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 40 20% 92%;
+    --muted-foreground: 42 10% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 152 28% 94%;
+    --accent-foreground: 152 42% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 152 50% 36%;
 
     --radius: 0.5rem;
 
+    /* Custom Design Tokens */
+    --gold: 43 75% 47%;
+    --gold-light: 43 75% 70%;
+    --jade: 152 50% 36%;
+    --jade-light: 152 28% 94%;
+    --jade-dark: 152 42% 15%;
+    --ivory: 40 30% 97%;
+    --bamboo: 42 10% 50%;
+    --ink: 40 8% 16%;
+
+    /* Tile Colors */
+    --tile-wan: 0 0% 10%;
+    --tile-tong: 152 50% 36%;
+    --tile-tiao: 152 42% 15%;
+    --tile-zi: 43 60% 45%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(44, 40, 34, 0.06);
+    --shadow-md: 0 4px 12px rgba(44, 40, 34, 0.1);
+    --shadow-lg: 0 10px 30px rgba(44, 40, 34, 0.15);
+    --shadow-glow: 0 0 40px rgba(45, 139, 86, 0.2);
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --primary: 152 45% 45%;
+    --primary-foreground: 40 20% 97%;
+    --primary-light: 152 30% 20%;
+    --primary-dark: 152 42% 70%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --background: 40 8% 10%;
+    --foreground: 40 20% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --card: 40 8% 14%;
+    --card-foreground: 40 20% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover: 40 8% 14%;
+    --popover-foreground: 40 20% 92%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 40 8% 18%;
+    --secondary-foreground: 40 20% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 40 8% 20%;
+    --muted-foreground: 40 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 152 30% 20%;
+    --accent-foreground: 152 40% 80%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 40 8% 22%;
+    --input: 40 8% 22%;
+    --ring: 152 45% 45%;
+
+    --jade: 152 45% 45%;
+    --jade-light: 152 30% 20%;
+    --jade-dark: 152 42% 70%;
+    --ivory: 40 8% 10%;
+    --ink: 40 20% 92%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,13 +127,108 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-serif antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
 body,
 #root {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+}
+
+/* Mahjong Tile Styles */
+.mahjong-tile {
+  @apply relative flex items-center justify-center rounded-md;
+  background: linear-gradient(to bottom, #FFFEF9, #F5F0E6);
+  box-shadow: 0 2px 4px rgba(44, 40, 34, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  aspect-ratio: 3/4;
+}
+
+.mahjong-tile-wan {
+  color: hsl(var(--tile-wan));
+}
+
+.mahjong-tile-tong {
+  color: hsl(var(--tile-tong));
+}
+
+.mahjong-tile-tiao {
+  color: hsl(var(--tile-tiao));
+}
+
+.mahjong-tile-zi {
+  color: hsl(var(--tile-zi));
+}
+
+/* Decorative Elements */
+.section-divider {
+  @apply w-full flex items-center justify-center gap-4 my-12;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  @apply flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent;
+}
+
+/* Gradient Backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--background)) 50%, hsl(var(--primary-light)) 100%);
+}
+
+.gradient-jade {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
+}
+
+/* Animation Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
 }
