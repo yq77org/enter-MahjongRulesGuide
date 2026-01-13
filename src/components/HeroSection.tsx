@@ -1,17 +1,23 @@
 import { ChevronDown } from "lucide-react";
 import { TileGroup } from "./MahjongTile";
-
-const heroTiles = [
-  { symbol: "一", type: "wan" as const },
-  { symbol: "二", type: "wan" as const },
-  { symbol: "三", type: "wan" as const },
-  { symbol: "東", type: "zi" as const },
-  { symbol: "發", type: "zi" as const },
-];
-
+const heroTiles = [{
+  symbol: "一",
+  type: "wan" as const
+}, {
+  symbol: "二",
+  type: "wan" as const
+}, {
+  symbol: "三",
+  type: "wan" as const
+}, {
+  symbol: "東",
+  type: "zi" as const
+}, {
+  symbol: "發",
+  type: "zi" as const
+}];
 export function HeroSection() {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center gradient-hero pt-16">
+  return <section className="relative min-h-screen flex items-center justify-center gradient-hero pt-16">
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
@@ -30,16 +36,14 @@ export function HeroSection() {
             麻将规则指南
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            从入门到精通，全面了解中国麻将的玩法与技巧
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in-up" style={{
+          animationDelay: "0.1s"
+        }}>从入门到精通，全面了解中国麻将的玩法与技巧!!</p>
 
           {/* CTA Button */}
-          <a
-            href="#introduction"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-semibold hover:bg-primary-dark transition-all duration-300 hover:shadow-elegant animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <a href="#introduction" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display font-semibold hover:bg-primary-dark transition-all duration-300 hover:shadow-elegant animate-fade-in-up" style={{
+          animationDelay: "0.2s"
+        }}>
             开始学习
           </a>
 
@@ -49,6 +53,5 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
